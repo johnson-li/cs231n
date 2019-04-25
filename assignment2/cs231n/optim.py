@@ -67,7 +67,8 @@ def sgd_momentum(w, dw, config=None):
     ###########################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-    pass
+    v = v * config['momentum'] - config['learning_rate'] * dw
+    next_w = w + v
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
     ###########################################################################
@@ -76,7 +77,6 @@ def sgd_momentum(w, dw, config=None):
     config['velocity'] = v
 
     return next_w, config
-
 
 
 def rmsprop(w, dw, config=None):
