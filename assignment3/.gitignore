@@ -5,3 +5,7 @@
 
 # gitignore the built release.
 assignment3/*
+
+cs231n/datasets/coco*
+cs231n/datasets/imagenet*
+cs231n/datasets/squeeze*
